@@ -1,17 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Counter from "./components/Counter";
+import Counter from "./components/Counter/Counter";
+import CounterTwo from "./components/Counter/CounterTwo";
 
 function App() {
-  const { count, onIncrement, onDecrement } = Counter();
   return (
     <div className='App'>
-      <div>
-        <h1>Counter</h1>
-      </div>
-      <p>{count}</p>
-      <button onClick={onIncrement}>ADD</button>
-      <button onClick={onDecrement}>SUSTRACT</button>
+      <CounterTwo />
+      <Counter />
     </div>
   );
 }
