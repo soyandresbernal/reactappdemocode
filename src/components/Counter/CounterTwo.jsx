@@ -1,14 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import useCounter from "../../hooks/useCounter";
 
 const CounterTwo = () => {
-  const [count, setCount] = useState(0);
-  const handleIncrement = () => {
-    setCount(count + 1);
-  };
-
-  const handleDecrement = () => {
-    setCount(count > 0 ? count - 1 : 0);
-  };
+  const { count, onIncrement, onDecrement } = useCounter(); //instancia hook
 
   return (
     <div>
@@ -23,8 +17,8 @@ const CounterTwo = () => {
       </div>
       <div>
         <h2>{count}</h2>
-        <button onClick={handleDecrement}>Previous</button>
-        <button onClick={handleIncrement}>Next</button>
+        <button onClick={onDecrement}>Previous</button>
+        <button onClick={onIncrement}>Next</button>
       </div>
     </div>
   );
