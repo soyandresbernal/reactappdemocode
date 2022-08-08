@@ -1,4 +1,4 @@
-export const comment = [
+export const comments = [
   {
     id: "1",
     name: "Andrés Doe",
