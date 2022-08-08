@@ -1,24 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import useFetchPokemons from "../FetchPokemons";
 //carga el usuarioel fetch
 const ViewTwo = () => {
-  const [pokemons, setPokemons] = useState([]);
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const fetchPokemons = async () => {
-    try {
-      setIsLoading(true);
-      const response = await fetch("https://pokeapi.co/api/v2/pokemon");
-      const data = await response.json();
-      setPokemons(data.results);
-    } catch (error) {
-      console.error(error);
-      setPokemons([]);
-      setError(error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  const { error, isLoading, onFetchPokemons, pokemons } = useFetchPokemons();
 
   return (
     <div>
@@ -31,7 +15,7 @@ const ViewTwo = () => {
           </div>
         ))}
       {error && <p>somenthig wrong!</p>}
-      <button onClick={fetchPokemons}>FETCH POKEMONS</button>
+      <button onClick={onFetchPokemons}>FETCH POKEMONS</button>
     </div>
   );
 };

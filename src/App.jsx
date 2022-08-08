@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
 
-import ViewOne from "./components/ViewOne/index";
+import ViewTwo from "./components/ViewTwo/index";
 function App() {
   return (
     <div className='App'>
-      <ViewOne />
+      <ViewTwo />
     </div>
   );
 }
