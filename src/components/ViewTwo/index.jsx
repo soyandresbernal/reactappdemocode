@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+//carga el usuarioel fetch
 const ViewTwo = () => {
   const [pokemons, setPokemons] = useState([]);
   const [error, setError] = useState(null);
@@ -31,7 +31,7 @@ const ViewTwo = () => {
           </div>
         ))}
       {error && <p>somenthig wrong!</p>}
-      <button onClick={fetchPokemons}>fetch Pokemons</button>
+      <button onClick={fetchPokemons}>FETCH POKEMONS</button>
     </div>
   );
 };

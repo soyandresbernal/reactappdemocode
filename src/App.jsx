@@ -1,13 +1,11 @@
 import React from "react";
 import "./App.css";
-import Counter from "./components/Counter/Counter";
-import CounterTwo from "./components/Counter/CounterTwo";
 
+import ViewOne from "./components/ViewOne/index";
 function App() {
   return (
     <div className='App'>
-      <CounterTwo />
-      <Counter />
+      <ViewOne />
     </div>
   );
 }
