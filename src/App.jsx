@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
-import Auth from "./components/DataFetch/Auth";
+
+import Header from "./Myproject/containers/Header";
+
 function App() {
   return (
     <div className='App'>
-      <Auth />
+      <Header />
     </div>
   );
 }
